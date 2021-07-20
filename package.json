@@ -2,6 +2,10 @@
     "name": "react-pdf",
     "version": "0.1.0",
     "private": true,
+    "engines": {
+        "node": "14.17.3",
+        "npm": "7.19.1"
+    },
     "dependencies": {
         "@react-pdf/renderer": "^2.0.16",
         "@testing-library/jest-dom": "^5.11.4",
