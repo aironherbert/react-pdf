@@ -13,10 +13,6 @@
         "web-vitals": "^1.0.1",
         "yarn": "^1.22.10"
     },
-    "engines": {
-        "node": "14.17.3",
-        "npm": "7.19.1"
-    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
