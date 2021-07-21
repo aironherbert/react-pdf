@@ -1,7 +1,6 @@
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet, Image, Link, Font} from '@react-pdf/renderer';
 import img from '../img/img.jpg'
-import './style.css'
 
 const txt = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor suscipit ipsum ac dictum. Suspendisse potenti. Nulla scelerisque eget eros et sagittis. Morbi a dolor aliquam, cursus lacus ac, cursus ligula. Nunc in auctor nunc. Nunc at risus id mauris gravida tristique vitae quis arcu. Aliquam erat volutpat. Suspendisse id sollicitudin quam.
 
@@ -13,30 +12,6 @@ Vestibulum rutrum fermentum ex, vel laoreet turpis ullamcorper euismod. Mauris v
 
 Quisque sed sollicitudin est, a pulvinar est. Nunc suscipit porttitor urna, iaculis vulputate eros pellentesque vitae. Morbi sodales dolor facilisis arcu efficitur consectetur. Vivamus gravida congue justo, non vulputate elit feugiat a. Proin efficitur enim lectus. Quisque ut orci ut libero luctus dignissim. Cras interdum lacinia rhoncus.`
 
-Font.register({
-    family: 'Roboto',
-    fonts: [
-      {
-        src: `/Roboto-Regular.ttf`
-      },
-      {
-        src: `/Roboto-Bold.ttf`,
-        fontWeight: 'bold'
-      },
-      {
-        src: `/Roboto-Italic.ttf`,
-        fontWeight: 'normal',
-        fontStyle: 'italic'
-      },
-      {
-        src: `/Roboto-BoldItalic.ttf`,
-        fontWeight: 'bold',
-        fontStyle: 'italic'
-      }
-    ]
-  })
-
-// Create styles
 const styles = StyleSheet.create({
     page: {
         flexDirection: 'column',
@@ -70,7 +45,6 @@ const styles = StyleSheet.create({
     },
 });
 
-// Create Document Component
 const MyDocument = () => (
     <Document title="React-PDF">
         <Page size="A4" style={styles.page}>
