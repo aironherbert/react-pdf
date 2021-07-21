@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Page, Text, View, StyleSheet, Image, Link, Font} from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Image, Link, PDFViewer } from '@react-pdf/renderer';
 import img from '../img/img.jpg'
 
 const txt = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor suscipit ipsum ac dictum. Suspendisse potenti. Nulla scelerisque eget eros et sagittis. Morbi a dolor aliquam, cursus lacus ac, cursus ligula. Nunc in auctor nunc. Nunc at risus id mauris gravida tristique vitae quis arcu. Aliquam erat volutpat. Suspendisse id sollicitudin quam.
@@ -46,20 +46,22 @@ const styles = StyleSheet.create({
 });
 
 const MyDocument = () => (
-    <Document title="React-PDF">
-        <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text style={styles.title}>Section #1</Text>
-                <Text style={[styles.text, styles.br]}>Exemplo de um link: <Link src="https://www.google.com/" style={styles.link}>Google</Link></Text>
-                <Text style={styles.text}>{txt}</Text>
-                <Text style={styles.text}>{txt}</Text>
-                <Text style={styles.title}>Section #2</Text>
-                <Image src={ img } style={styles.img }></Image>
-                <Text style={styles.text}>{txt}</Text>
-                <Text style={styles.text}>{txt}</Text>
-            </View>
-        </Page>
-    </Document>
+    <PDFViewer>
+        <Document title="React-PDF">
+            <Page size="A4" style={styles.page}>
+                <View style={styles.section}>
+                    <Text style={styles.title}>Section #1</Text>
+                    <Text style={[styles.text, styles.br]}>Exemplo de um link: <Link src="https://www.google.com/" style={styles.link}>Google</Link></Text>
+                    <Text style={styles.text}>{txt}</Text>
+                    <Text style={styles.text}>{txt}</Text>
+                    <Text style={styles.title}>Section #2</Text>
+                    <Image src={img} style={styles.img}></Image>
+                    <Text style={styles.text}>{txt}</Text>
+                    <Text style={styles.text}>{txt}</Text>
+                </View>
+            </Page>
+        </Document>
+    </PDFViewer>
 );
 
 export default MyDocument;

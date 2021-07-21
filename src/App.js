@@ -1,14 +1,12 @@
 import React from 'react';
-import { PDFViewer } from '@react-pdf/renderer';
-import MyDocument from './components/MyDocument';
+import Routes from './routes';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <PDFViewer>
-        <MyDocument />
-      </PDFViewer>
+        <Routes/>
     </div>
   );
 }
